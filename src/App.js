@@ -1,5 +1,5 @@
 import './App.css';
-import Post from "../src/components/Post"
+import Posts from "../src/components/Posts"
 
 const posts = [
   {
@@ -25,18 +25,12 @@ const posts = [
 ]
 
 const App = () => {
-  const postComponents = posts.map((post, index) => {
-    return(
-        <Post
-            post={post}
-            key={`post-${index}`}
-        />
-    )
-})
   return (
     <div className="App">
       <h1>Dinos Functional</h1>
-      {postComponents}
+      <Posts 
+        posts={posts}
+      />
     </div>
   );
 }
